@@ -1,0 +1,9 @@
+from transformers import pipeline
+
+classifier = pipeline(
+    "text-classification",
+    model="MRIGAANKSh/priority-classification-distilbert"
+)
+
+result = classifier("There is a transformer fire near the school building")[0]
+print(result)
